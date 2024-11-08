@@ -25,6 +25,7 @@
       }
     },
     "global_next" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -45,6 +46,7 @@
       }
     },
     "hello" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -93,6 +95,9 @@
           }
         }
       }
+    },
+    "splash_screen_title" : {
+
     }
   },
   "version" : "1.0"
