@@ -9,15 +9,15 @@ struct OnboardingScreen: View {
     // Define your pages here
     private let pages: [OnboardingPageView.Model] = [
         OnboardingPageView.Model(
-            image: "splash",
+            image: "onboarding1",
             title: String(localized: "onboarding_1_info")
         ),
         OnboardingPageView.Model(
-            image: "houseKey",
+            image: "onboarding2",
             title: String(localized: "onboarding_2_info")
         ),
         OnboardingPageView.Model(
-            image: "houseKey",
+            image: "onboarding3",
             title: String(localized: "onboarding_3_info")
         )
     ]
@@ -54,8 +54,6 @@ struct OnboardingScreen: View {
             }
             .padding(.horizontal, 8)
         }
-        // TODO: check a solution for this logic
-        // this is performing because the tint on the onboarding is blue and the tint for whatnext images is white (system default)
         .onAppear {
             UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(.black)
             UIPageControl.appearance().pageIndicatorTintColor =

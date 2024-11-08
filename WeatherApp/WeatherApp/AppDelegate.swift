@@ -4,7 +4,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     let app: AppState
 
     override init() {
-        app = AppState(navigation: NavigationState())
+        let localStorageClient = LocalStorageClient()
+        app = AppState(
+            navigation: NavigationState(),
+            repository: Repository(localStorageClient: localStorageClient)
+        )
         super.init()
     }
 
