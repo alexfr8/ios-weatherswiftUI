@@ -15,7 +15,7 @@ struct OnboardingPageView: View {
                 .scaledToFit()
                 .padding()
 
-            Text(verbatim: model.title)
+            TextBody(verbatim: model.title)
         }
         .padding()
     }

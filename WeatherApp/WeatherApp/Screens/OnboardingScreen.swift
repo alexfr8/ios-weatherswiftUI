@@ -36,10 +36,10 @@ struct OnboardingScreen: View {
             }
             .tabViewStyle(.page)
 
-            VStack(spacing: 6) {
-                Button(isLastPage ? "global_done" : "global_continue") {
+            VStack(spacing: 12) {
+                GenericButton(isLastPage ? "global_done" : "global_continue") {
                     if isLastPage {
-                        app.navigation.push(to: .home)
+                        app.navigation.push(to: .apikey)
                     } else {
                         withAnimation {
                             currentPage += 1
@@ -47,13 +47,15 @@ struct OnboardingScreen: View {
                     }
                 }
 
-                Button("global_skip") {
-                    app.navigation.push(to: .home)
+                TonalButton("global_skip") {
+                    app.navigation.push(to: .apikey)
                 }
                 .isHidden(isLastPage)
             }
-            .padding(.horizontal, 8)
+            .padding(.horizontal,36)
+            .padding(.vertical, 18)
         }
+        .background(Color.background)
         .onAppear {
             UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(.black)
             UIPageControl.appearance().pageIndicatorTintColor =

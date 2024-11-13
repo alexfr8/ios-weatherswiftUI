@@ -10,6 +10,8 @@ extension Screen: View {
             SplashScreen()
         case .onboarding:
             OnboardingScreen()
+        case .apikey:
+            ApiKeyScreen()
         case .home:
             HomeScreen()
 
