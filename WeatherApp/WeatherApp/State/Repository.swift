@@ -3,6 +3,8 @@ import Foundation
 protocol RepositoryProtocol: Actor {
     func setFirstTimeRun(_ isFirstTime: Bool) async
     func getFirstTimeRun() async -> Bool
+    func setApiKey(_ apikey: String) async
+    func getApiKey() async -> String
     func cleanAll() async
 }
 
@@ -21,6 +23,14 @@ actor Repository: RepositoryProtocol {
 
     func getFirstTimeRun() async -> Bool {
         await localStorageClient.getFirstTimeRun()
+    }
+
+    func setApiKey(_ apikey: String) async {
+        await localStorageClient.setApiKey(apikey)
+    }
+
+    func getApiKey() async -> String {
+        await localStorageClient.getApiKey()
     }
 
     func cleanAll() async {

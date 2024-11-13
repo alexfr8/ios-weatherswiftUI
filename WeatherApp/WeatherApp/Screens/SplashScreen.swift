@@ -6,7 +6,7 @@ struct SplashScreen: View {
 
     var body: some View {
         VStack {
-            Text("splash_screen_title")
+            TextTitle(text: "splash_screen_title")
                 .padding(.horizontal, 6)
                 .padding(.top, 12)
 
@@ -32,6 +32,7 @@ struct SplashScreen: View {
             .tint(.gray)
             .foregroundColor(.white)
         }
+        .background(Color.background)
         .task {
             await startAppFlow()
         }
@@ -39,8 +40,13 @@ struct SplashScreen: View {
 
     private func startAppFlow() async {
         if await app.repository.getFirstTimeRun() {
-            app.navigation.push(to: .home)
+            if await app.repository.getApiKey().isEmpty {
+                app.navigation.push(to: .apikey)
+            } else {
+                app.navigation.push(to: .home)
+            }
         } else {
+            await app.repository.cleanAll()
             await app.repository.setFirstTimeRun(true)
             app.navigation.push(to: .onboarding)
         }

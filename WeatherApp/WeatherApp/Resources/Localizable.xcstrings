@@ -4,6 +4,56 @@
     "" : {
 
     },
+    "api_key_body" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To continue using this app you need to get an API key from open weather services on: \n\nhttps://openweathermap.org\n\nPlease, copy your API on the field and continue "
+          }
+        }
+      }
+    },
+    "api_key_button" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        }
+      }
+    },
+    "api_key_error" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The key must have 32 alphanumeric characters"
+          }
+        }
+      }
+    },
+    "api_key_field_hint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "key"
+          }
+        }
+      }
+    },
+    "api_key_field_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your api key"
+          }
+        }
+      }
+    },
     "global_continue" : {
       "localizations" : {
         "en" : {
@@ -24,17 +74,6 @@
         }
       }
     },
-    "global_next" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Next"
-          }
-        }
-      }
-    },
     "global_skip" : {
       "localizations" : {
         "en" : {
@@ -45,23 +84,12 @@
         }
       }
     },
-    "hello" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hello"
-          }
-        }
-      }
-    },
     "Hello, Home!" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hello home”"
+            "value" : "Hello home"
           }
         }
       }
@@ -96,8 +124,25 @@
         }
       }
     },
+    "powered_by" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powered by: "
+          }
+        }
+      }
+    },
     "splash_screen_title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome to your weather app!"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

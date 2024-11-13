@@ -4,6 +4,7 @@ enum Screen {
     case root
     case splash
     case onboarding
+    case apikey
     case home
 }
 
@@ -26,6 +27,8 @@ extension Screen: Identifiable {
             "splash"
         case .onboarding:
             "onboarding"
+        case .apikey:
+            "apikey"
         case .home:
             "home"
         }
