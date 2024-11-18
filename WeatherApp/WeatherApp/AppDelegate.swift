@@ -6,6 +6,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     override init() {
         let localStorageClient = LocalStorageClient()
         app = AppState(
+            api: APIServices(localStorageClient: localStorageClient),
             navigation: NavigationState(),
             repository: Repository(localStorageClient: localStorageClient)
         )
