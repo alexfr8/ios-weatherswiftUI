@@ -55,31 +55,94 @@
       }
     },
     "auth_error_message" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error authorizing openweather access"
+          }
+        }
+      }
     },
     "auth_error_title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auth error"
+          }
+        }
+      }
     },
     "bad_url_error_message" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error, the url is not valid"
+          }
+        }
+      }
     },
     "bad_url_error_title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bad url"
+          }
+        }
+      }
     },
     "client_error_message" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error, client error"
+          }
+        }
+      }
     },
     "client_error_title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Client error"
+          }
+        }
+      }
     },
     "connection_error_message" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error connecting to API"
+          }
+        }
+      }
     },
     "connection_error_title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Api error"
+          }
+        }
+      }
     },
     "error_session_expired" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your session is expired"
+          }
+        }
+      }
     },
     "global_continue" : {
       "localizations" : {
@@ -122,10 +185,24 @@
       }
     },
     "no_data_error_message" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No data include on response"
+          }
+        }
+      }
     },
     "no_data_error_title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data error"
+          }
+        }
+      }
     },
     "onboarding_1_info" : {
       "localizations" : {
@@ -168,10 +245,24 @@
       }
     },
     "server_error_message" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SERVER ERROR"
+          }
+        }
+      }
     },
     "server_error_title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Server error"
+          }
+        }
+      }
     },
     "splash_screen_title" : {
       "localizations" : {
@@ -184,13 +275,34 @@
       }
     },
     "too_much_attemps_message" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Too much attempts"
+          }
+        }
+      }
     },
     "too_much_attemps_title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error on attemps"
+          }
+        }
+      }
     },
     "unknown_error" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown error"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
