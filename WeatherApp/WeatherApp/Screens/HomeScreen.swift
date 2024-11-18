@@ -1,11 +1,26 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @Environment(\.app)
+    private var app
+
+    @State var today: [Today] = []
+
     var body: some View {
-        Text("Hello, Home!")
+        VStack {
+            Text("Hello, Home!")
+            List(today, id: \.self.name) { cityTodayForecast in
+                RoundedCellView(text: cityTodayForecast.name)
+            }
+            .background(Color.background)
+
+        }
+        .background(Color.background)
     }
 }
 
 #Preview {
-    HomeScreen()
+    VStack {
+        HomeScreen()
+    }
 }

@@ -3,7 +3,7 @@ import SwiftUI
 
 struct AppStateKey: EnvironmentKey {
     static let defaultValue: AppStateProtocol = AppState(
-        navigation: NavigationState(),
+        api: APIServices(localStorageClient: LocalStorageClient()), navigation: NavigationState(),
         repository: Repository(localStorageClient: LocalStorageClient())
     )
 }
