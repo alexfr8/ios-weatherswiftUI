@@ -4,6 +4,7 @@ extension UserDefaults {
     private enum UserDefaultKeys: String {
         case firstRun
         case apiKey
+        case cityList
     }
 
     var firstRun: Bool {
@@ -21,6 +22,15 @@ extension UserDefaults {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: UserDefaultKeys.apiKey.rawValue)
+        }
+    }
+
+    var cityList: Data {
+        get {
+            UserDefaults.standard.data(forKey: UserDefaultKeys.cityList.rawValue) ?? Data()
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaultKeys.cityList.rawValue)
         }
     }
 

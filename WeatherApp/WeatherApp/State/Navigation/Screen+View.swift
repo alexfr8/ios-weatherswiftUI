@@ -14,6 +14,8 @@ extension Screen: View {
             ApiKeyScreen()
         case .home:
             HomeScreen()
+        case .addCity:
+            AddCityScreen()
 
         }
     }

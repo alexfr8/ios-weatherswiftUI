@@ -28,11 +28,11 @@ struct Geocity: Codable {
 }
 
 struct LocalNames: Codable {
-    let pl: String
-    let de: String
-    let es: String
-    let lt: String
-    let fr: String
+    let pl: String?
+    let de: String?
+    let es: String?
+    let lt: String?
+    let fr: String?
 
     init() {
         pl = ""

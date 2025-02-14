@@ -5,6 +5,8 @@ protocol LocalStorageProtocol: Actor {
     func setFirstTimeRun(_ isFirstTime: Bool)
     func getApiKey() -> String
     func setApiKey(_ apiKey: String)
+    func setCities(cities: Data)
+    func getCities() -> Data
     func cleanAll() async
 }
 
@@ -29,6 +31,14 @@ actor LocalStorageClient: LocalStorageProtocol {
 
     func setApiKey(_ apiKey: String) {
         UserDefaults.standard.apiKey = apiKey
+    }
+
+    func setCities(cities: Data) {
+        UserDefaults.standard.cityList = cities
+    }
+
+    func getCities() -> Data {
+        UserDefaults.standard.cityList
     }
 
     // MARK: - Clean

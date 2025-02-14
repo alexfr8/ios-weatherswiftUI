@@ -6,6 +6,7 @@ enum Screen {
     case onboarding
     case apikey
     case home
+    case addCity
 }
 
 extension Screen: Hashable {
@@ -31,6 +32,8 @@ extension Screen: Identifiable {
             "apikey"
         case .home:
             "home"
+        case .addCity:
+            "addCity"
         }
     }
 }

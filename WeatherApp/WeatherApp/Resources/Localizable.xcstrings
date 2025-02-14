@@ -4,6 +4,49 @@
     "" : {
 
     },
+    "%.1f°C" : {
+
+    },
+    "%@, %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$@"
+          }
+        }
+      }
+    },
+    "add_city_field_hint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your city name"
+          }
+        }
+      }
+    },
+    "add_city_field_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "City:"
+          }
+        }
+      }
+    },
+    "add_city_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a new city to your list"
+          }
+        }
+      }
+    },
     "api_key_body" : {
       "localizations" : {
         "en" : {
@@ -174,12 +217,12 @@
         }
       }
     },
-    "Hello, Home!" : {
+    "home_add_button" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hello home"
+            "value" : "Add"
           }
         }
       }
@@ -244,6 +287,16 @@
         }
       }
     },
+    "search_city_button" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        }
+      }
+    },
     "server_error_message" : {
       "localizations" : {
         "en" : {
@@ -303,6 +356,9 @@
           }
         }
       }
+    },
+    "Your city list" : {
+
     }
   },
   "version" : "1.0"

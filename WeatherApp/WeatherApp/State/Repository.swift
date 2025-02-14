@@ -5,6 +5,8 @@ protocol RepositoryProtocol: Actor {
     func getFirstTimeRun() async -> Bool
     func setApiKey(_ apikey: String) async
     func getApiKey() async -> String
+    func setCities(cities: [CityDomain]) async
+    func getCities() async -> [CityDomain]
     func cleanAll() async
 }
 
@@ -33,6 +35,25 @@ actor Repository: RepositoryProtocol {
         await localStorageClient.getApiKey()
     }
 
+    func setCities(cities: [CityDomain]) async {
+        do {
+            let json = try JSONEncoder().encode(cities)
+            await localStorageClient.setCities(cities: json)
+        } catch {
+            print("error encoding cities")
+        }
+    }
+
+    func getCities() async -> [CityDomain] {
+        let citiesJson = await localStorageClient.getCities()
+        do {
+            return try JSONDecoder().decode([CityDomain].self, from: citiesJson)
+        } catch {
+            print("error decoding cities")
+            return []
+        }
+    }
+    
     func cleanAll() async {
         await localStorageClient.cleanAll()
     }
