@@ -1,21 +1,44 @@
 import SwiftUI
 
 struct RoundedCellView: View {
-    let text: String
+    let today: Today
 
     var body: some View {
-        Text(text)
-            .font(.headline)
-            .padding()
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color.white)
-            .cornerRadius(12)
-            .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+        HStack {
+            VStack(alignment: .leading, spacing: 5) {
+                Text(today.name)
+                    .font(.headline)
+                Text("\(today.main.temp, specifier: "%.1f")°C")
+                    .font(.subheadline)
+                Text(today.weather.first?.description.capitalized ?? "N/A")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+            Spacer()
+            // Icono del clima
+            Image(systemName: getWeatherIcon(for: today.weather.first?.main ?? "Clear"))
+                .resizable()
+                .scaledToFit()
+                .frame(width: 40, height: 40)
+                .padding()
+        }
     }
+
+    func getWeatherIcon(for main: String) -> String {
+            switch main {
+            case "Clear": return "sun.max.fill"
+            case "Clouds": return "cloud.fill"
+            case "Rain": return "cloud.rain.fill"
+            case "Snow": return "snow"
+            case "Thunderstorm": return "cloud.bolt.fill"
+            default: return "questionmark.circle.fill"
+            }
+        }
 }
 
 #Preview {
+    let today = Today()
     VStack {
-        RoundedCellView(text: "The title")
+        RoundedCellView(today: today)
     }
 }
