@@ -10,7 +10,7 @@ struct HomeScreen: View {
         VStack {
             HStack{
                 Spacer()
-                Text("Your city list")
+                Text("home_city_list_title")
                 Spacer()
                 Button {
                     app.navigation.present(to: .addCity) {
@@ -23,7 +23,9 @@ struct HomeScreen: View {
             }
             .padding(.horizontal, 8)
             List(today, id: \.self.name) { cityTodayForecast in
-                RoundedCellView(today: cityTodayForecast)
+                RoundedCellView(today: cityTodayForecast) { today in
+                    app.navigation.push(to: .detail(weather: today))
+                }
             }
             .background(Color.background)
 
@@ -35,6 +37,7 @@ struct HomeScreen: View {
     }
 
     private func getWeather() {
+        today = []
         let client = app.openWeatherClient
         let repo = app.repository
         Task {
@@ -62,7 +65,9 @@ struct HomeScreen: View {
                     }
                 }
             }
-            today.append(contentsOf: results)
+            today.append(contentsOf: results.sorted(by: { weather1, weather2 in
+                weather1.name < weather2.name
+            }))
         }
     }
 }

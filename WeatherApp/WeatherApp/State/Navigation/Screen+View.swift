@@ -17,6 +17,8 @@ extension Screen: View {
         case .addCity:
             AddCityScreen()
 
+        case .detail(let today):
+            DetailScreen(weather: today)
         }
     }
 }

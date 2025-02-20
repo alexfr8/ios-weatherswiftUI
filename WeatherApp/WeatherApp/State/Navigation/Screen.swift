@@ -7,6 +7,7 @@ enum Screen {
     case apikey
     case home
     case addCity
+    case detail(weather: Today)
 }
 
 extension Screen: Hashable {
@@ -34,6 +35,8 @@ extension Screen: Identifiable {
             "home"
         case .addCity:
             "addCity"
+        case .detail(weather: _):
+            "detail"
         }
     }
 }
