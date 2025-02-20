@@ -7,6 +7,12 @@
     "%.1f°C" : {
 
     },
+    "%@ %%" : {
+
+    },
+    "%@ º" : {
+
+    },
     "%@, %@" : {
       "localizations" : {
         "en" : {
@@ -16,6 +22,12 @@
           }
         }
       }
+    },
+    "%lld %%" : {
+
+    },
+    "%lld°" : {
+
     },
     "add_city_field_hint" : {
       "localizations" : {
@@ -177,6 +189,176 @@
         }
       }
     },
+    "detail_5_days_forecast_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Five day forecast"
+          }
+        }
+      }
+    },
+    "detail_back" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        }
+      }
+    },
+    "detail_clouds_information" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clouds:"
+          }
+        }
+      }
+    },
+    "detail_east" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E"
+          }
+        }
+      }
+    },
+    "detail_extra_information" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Information"
+          }
+        }
+      }
+    },
+    "detail_feelslike_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temp feeling:"
+          }
+        }
+      }
+    },
+    "detail_humidity_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Humidity:"
+          }
+        }
+      }
+    },
+    "detail_max_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max:"
+          }
+        }
+      }
+    },
+    "detail_min_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min:"
+          }
+        }
+      }
+    },
+    "detail_nort" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N"
+          }
+        }
+      }
+    },
+    "detail_nort_east" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NE"
+          }
+        }
+      }
+    },
+    "detail_nort_west" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NW"
+          }
+        }
+      }
+    },
+    "detail_south" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S"
+          }
+        }
+      }
+    },
+    "detail_south_east" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SE"
+          }
+        }
+      }
+    },
+    "detail_south_west" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SW"
+          }
+        }
+      }
+    },
+    "detail_west" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W"
+          }
+        }
+      }
+    },
+    "detail_wind_information" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wind"
+          }
+        }
+      }
+    },
     "error_session_expired" : {
       "localizations" : {
         "en" : {
@@ -223,6 +405,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add"
+          }
+        }
+      }
+    },
+    "home_city_list_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "City list"
           }
         }
       }
@@ -356,9 +548,6 @@
           }
         }
       }
-    },
-    "Your city list" : {
-
     }
   },
   "version" : "1.0"
