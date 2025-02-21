@@ -22,10 +22,13 @@ struct HomeScreen: View {
 
             }
             .padding(.horizontal, 8)
-            List(today, id: \.self.name) { cityTodayForecast in
-                RoundedCellView(today: cityTodayForecast) { today in
-                    app.navigation.push(to: .detail(weather: today))
+            List {
+                ForEach(today, id: \.self.name) { cityTodayForecast in
+                    RoundedCellView(today: cityTodayForecast) { today in
+                        app.navigation.push(to: .detail(weather: today))
+                    }
                 }
+                .onDelete(perform: deleteItems)
             }
             .background(Color.background)
 
@@ -68,6 +71,16 @@ struct HomeScreen: View {
             today.append(contentsOf: results.sorted(by: { weather1, weather2 in
                 weather1.name < weather2.name
             }))
+        }
+    }
+
+    private func deleteItems(at offsets: IndexSet) {
+        Task {
+            let citiesToDelete = offsets.map { today[$0] }
+            for city in citiesToDelete {
+                await app.repository.deleteCity(withName: city.name)
+            }
+            getWeather()
         }
     }
 }

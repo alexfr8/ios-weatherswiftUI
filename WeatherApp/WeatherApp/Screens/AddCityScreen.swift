@@ -66,7 +66,7 @@ struct AddCityScreen: View {
                     }
 
                 }
-                .background(.listItemBackground)
+                .background(.clear)
                 .listStyle(.plain)
             }
 

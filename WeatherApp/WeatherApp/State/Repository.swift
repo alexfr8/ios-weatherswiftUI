@@ -7,6 +7,7 @@ protocol RepositoryProtocol: Actor {
     func getApiKey() async -> String
     func setCities(cities: [CityDomain]) async
     func getCities() async -> [CityDomain]
+    func deleteCity(withName: String) async
     func cleanAll() async
 }
 
@@ -53,7 +54,13 @@ actor Repository: RepositoryProtocol {
             return []
         }
     }
-    
+
+    func deleteCity(withName: String) async {
+        await setCities(cities: getCities().filter { city in
+            city.name != withName
+        })
+    }
+
     func cleanAll() async {
         await localStorageClient.cleanAll()
     }

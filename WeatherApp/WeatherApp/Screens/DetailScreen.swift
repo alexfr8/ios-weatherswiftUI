@@ -193,31 +193,56 @@ struct DetailScreen: View {
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 16) {
-                                    ForEach(forecast.list, id: \.dt) { day in
+                                    ForEach(forecast.list, id: \.dt) { forecast in
                                         VStack(spacing: 8) {
-                                            Text(formatDate(Double(day.dt)))
+                                            Text(formatDate(Double(forecast.dt)))
                                                 .font(.system(size: 9))
                                                 .bold()
                                             
-                                            Image(systemName: getWeatherIcon(for: day.weather.first?.main ?? "Clear"))
+                                            Image(systemName: getWeatherIcon(for: forecast.weather.first?.main ?? "Clear"))
                                                 .font(.system(size: 24))
 
-                                            Text("\(Int(day.main.temp))°")
+                                            Text("\(Int(forecast.main.temp))°")
                                                 .font(.title3)
                                                 .bold()
                                             
-                                            HStack(spacing: 4) {
-//                                                Text("↑\(Int(day.main.temp_max))°")
-//                                                    .foregroundColor(.red)
-//                                                Text("↓\(Int(day.main.temp_min))°")
-//                                                    .foregroundColor(.blue)
+                                            HStack {
+
+                                                Text("↑\(Int(forecast.main.tempMax))°")
+                                                    .foregroundColor(.red)
+                                                    .padding(.horizontal, 8)
+                                                Text("↓\(Int(forecast.main.tempMin))°")
+                                                    .foregroundColor(.blue)
+                                                    .padding(.horizontal, 8)
                                             }
                                             .font(.caption)
                                             
-                                            Text(day.weather.first?.description.capitalized ?? "")
+                                            Text(forecast.weather.first?.description.capitalized ?? "")
                                                 .font(.caption)
                                                 .foregroundColor(.gray)
                                                 .multilineTextAlignment(.center)
+
+                                            HStack {
+                                                Image(systemName: "wind")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 12, height: 12)
+                                                    .padding(.bottom, 8)
+
+                                                Image(systemName: getArrowImageName(for: forecast.wind.deg))
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 8, height: 8)
+                                                    .padding(.bottom, 8)
+
+                                                Text(getCardinalDirection(for: forecast.wind.deg))
+                                                    .font(.system(size: 8))
+                                                    .padding(.bottom, 8)
+
+                                                Text(convertSpeed(forecast.wind.speed))
+                                                    .font(.system(size: 8))
+                                                    .padding(.bottom, 8)
+                                            }
                                         }
                                         .frame(width: 100)
                                         .padding()

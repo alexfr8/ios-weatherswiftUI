@@ -29,6 +29,12 @@
     "%lld°" : {
 
     },
+    "↑%lld°" : {
+
+    },
+    "↓%lld°" : {
+
+    },
     "add_city_field_hint" : {
       "localizations" : {
         "en" : {
