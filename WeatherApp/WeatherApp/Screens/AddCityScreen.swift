@@ -58,7 +58,7 @@ struct AddCityScreen: View {
                             .foregroundColor(.text)
                     }
                     .background(.listItemBackground)
-                    .contentShape(Capsule())
+                    .contentShape(Rectangle())
                     .onTapGesture {
                         Task {
                             await storeCity(city: city)
@@ -66,7 +66,7 @@ struct AddCityScreen: View {
                     }
 
                 }
-                .background(.clear)
+                .background(Color.background)
                 .listStyle(.plain)
             }
 
@@ -167,6 +167,7 @@ struct AddCityScreen: View {
                 )
             )
             await repo.setCities(cities: cities)
+            dismiss()
         }
     }
 }

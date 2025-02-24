@@ -275,23 +275,19 @@ struct DetailScreen: View {
     @ViewBuilder
     private var skeletonView: some View {
         VStack(spacing: 16) {
-            // Skeleton para el nombre de la ciudad
+
             SkeletonView()
                 .frame(width: 200, height: 40)
-            
-            // Skeleton para estado y país
+
             SkeletonView()
                 .frame(width: 150, height: 25)
-            
-            // Skeleton para temperatura
+
             SkeletonView()
                 .frame(width: 120, height: 80)
-            
-            // Skeleton para descripción
+
             SkeletonView()
                 .frame(width: 180, height: 30)
-            
-            // Skeleton para pronóstico
+
             VStack(alignment: .leading, spacing: 12) {
                 SkeletonView()
                     .frame(width: 150, height: 30)
